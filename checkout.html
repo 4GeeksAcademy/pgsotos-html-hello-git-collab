@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Finalizar compra | Maison Vérane</title>
-    <meta name="description" content="Completa tu compra en Maison Vérane de forma segura. Ingresa tus datos personales, dirección de entrega y pago." />
+    <meta name="description" content="Completa tu compra en Maison Vérane. Ingresa tus datos personales, dirección de entrega y pago." />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.4/dist/index.global.js" integrity="sha384-LhJn7QKq7hHz9EqN//RkaYS9p1ZU3MqAxjeV0JI95iQ5Gol1uz/cQQ+pesz0xum7" crossorigin="anonymous"></script>
   </head>
   <body class="bg-stone-50 font-sans text-stone-900 antialiased">
@@ -228,7 +228,9 @@
             </fieldset>
           </section>
 
-          <!-- Paso 3: Pago con tarjeta -->
+          <!-- Paso 3: Pago con tarjeta.
+               Prototipo: los datos de tarjeta no se procesan. Un pago real debe usar
+               campos alojados por la pasarela de pago, nunca un formulario propio. -->
           <section id="paso-3" class="mb-12 scroll-mt-20">
             <h2 class="font-serif text-2xl font-semibold text-stone-900 mb-6">3. Pago con tarjeta</h2>
             
@@ -255,6 +257,8 @@
                   required
                   autocomplete="cc-number"
                   inputmode="numeric"
+                  pattern="[0-9 ]{13,23}"
+                  maxlength="23"
                   placeholder="0000 0000 0000 0000"
                   class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                 />
@@ -270,6 +274,8 @@
                     required
                     autocomplete="cc-exp"
                     inputmode="numeric"
+                    pattern="\d{2}\s?/\s?\d{2}"
+                    maxlength="7"
                     placeholder="MM/AA"
                     class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                   />
@@ -284,6 +290,8 @@
                     required
                     autocomplete="cc-csc"
                     inputmode="numeric"
+                    pattern="\d{3,4}"
+                    maxlength="4"
                     placeholder="000"
                     class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                   />
