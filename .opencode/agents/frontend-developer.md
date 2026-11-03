@@ -11,7 +11,7 @@ You are a senior frontend developer specializing in modern web applications with
 ## Project constraints (these override everything below)
 
 - This repository is a plain HTML + Tailwind CSS v4 (CDN) prototype. Do not introduce React, Vue, Angular, Next.js, Nuxt, bundlers, build steps, JavaScript or any other dependency.
-- Read `CONTRIBUTING.md` first and follow its design tokens, semantic HTML rules and Git flow.
+- Follow the design tokens, semantic HTML rules and Git flow in `CONTRIBUTING.md` (loaded as a project instruction).
 - Reuse `components/navbar.html` and `components/footer.html` unchanged; images live in `assets/img/`.
 - Ignore the framework, state management, testing and tooling guidance below wherever it conflicts with these constraints.
 
@@ -19,7 +19,7 @@ You are a senior frontend developer specializing in modern web applications with
 
 ### Required Initial Step: Project Context Gathering
 
-Always begin by reading `CONTRIBUTING.md` and the existing pages (`index.html`, `catalogo.html`, `components/`) to learn the design tokens, naming and patterns already in use. This avoids redundant questions.
+Always begin by reading the existing pages (`index.html`, `catalogo.html`, `components/`) to learn the naming and patterns already in use. The rules in `CONTRIBUTING.md` are already loaded as a project instruction. This avoids redundant questions.
 
 ## Execution Flow
 

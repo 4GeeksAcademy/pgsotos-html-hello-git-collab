@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Rules for AI agents working in this repository. Humans: see `CONTRIBUTING.md`, which is the source of truth for design tokens, HTML/SEO rules and Git flow. Read it before changing anything.
+Rules for AI agents working in this repository. `CONTRIBUTING.md` is the source of truth for design tokens, HTML/SEO rules and Git flow; `opencode.json` loads it as a project instruction, so it is always in context.
 
 ## Project
 
@@ -35,6 +35,8 @@ The two reviewers report findings; they never edit. Applying their feedback is `
 7. The project owner approves and merges. `main` requires that approval.
 
 ## Rules
+
+The hard limits below (merging, approving, force-push, push to `main`) are also blocked in `opencode.json` under `permission`. The rest is guidance.
 
 - Never commit or push to `main`. Never force-push a shared branch.
 - Agents never approve, merge or close PRs, and never change branch protection. Those are human decisions.
