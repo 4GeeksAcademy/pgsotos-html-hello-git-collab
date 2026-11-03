@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["CONTRIBUTING.md"],
+  "permission": {
+    "bash": {
+      "gh pr merge *": "deny",
+      "gh pr review *": "deny",
+      "git push --force *": "deny",
+      "git push origin main*": "deny",
+      "gh api *": "ask"
+    }
+  }
+}
