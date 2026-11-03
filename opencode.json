@@ -3,10 +3,13 @@
   "instructions": ["CONTRIBUTING.md"],
   "permission": {
     "bash": {
-      "gh pr merge *": "deny",
-      "gh pr review *": "deny",
-      "git push --force *": "deny",
-      "git push origin main*": "deny",
+      "gh pr merge*": "deny",
+      "gh pr review*": "deny",
+      "gh pr close*": "deny",
+      "git push*--force*": "deny",
+      "git push* -f*": "deny",
+      "git push* main*": "deny",
+      "git push*:main*": "deny",
       "gh api *": "ask"
     }
   }
