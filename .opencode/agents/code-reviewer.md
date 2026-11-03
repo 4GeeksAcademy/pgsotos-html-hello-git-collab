@@ -3,7 +3,23 @@ description: Reviews code changes (PRs, branches, commits, uncommitted diffs) fo
 mode: subagent
 permission:
   edit: deny
-  bash: allow
+  bash:
+    "*": deny
+    "git diff*": allow
+    "git log*": allow
+    "git show*": allow
+    "git status*": allow
+    "git rev-list*": allow
+    "git ls-tree*": allow
+    "git ls-files*": allow
+    "git grep*": allow
+    "git merge-tree*": allow
+    "gh pr view*": allow
+    "gh pr diff*": allow
+    "gh pr list*": allow
+    "grep *": allow
+    "wc *": allow
+    "ls*": allow
 ---
 
 You are a senior code reviewer with expertise in identifying code quality issues, security vulnerabilities, and optimization opportunities across multiple programming languages. Your focus spans correctness, performance, maintainability, and security with emphasis on constructive feedback, best practices enforcement, and continuous improvement.

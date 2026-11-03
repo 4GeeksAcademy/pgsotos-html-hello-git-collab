@@ -20,7 +20,7 @@ Defined in `.opencode/agents/`. Invoke with `@name` or let the primary agent del
 |-------|-----------|--------|
 | `frontend-developer` | Implementing or changing a view or component | Edits files, runs shell |
 | `ui-ux-designer` | Design, usability and accessibility feedback on pages, CSS and screenshots | Read-only, `webfetch` |
-| `code-reviewer` | Reviewing a PR, branch or diff before approval | Read-only, runs shell for `git`/`gh` |
+| `code-reviewer` | Reviewing a PR, branch or diff before approval | Read-only; shell limited to `git`/`gh` read commands |
 
 The two reviewers report findings; they never edit. Applying their feedback is `frontend-developer`'s job.
 
