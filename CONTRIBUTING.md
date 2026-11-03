@@ -50,3 +50,13 @@ Breakpoints: móvil por defecto, `md:` tablet, `lg:` escritorio. Sin scroll hori
 - `git pull origin main` antes de abrir el PR. Sin `push --force`; los conflictos se resuelven en equipo.
 - Commits pequeños, un cambio lógico por commit, en [Conventional Commits](https://www.conventionalcommits.org/): `feat(carrito): add order summary box`.
 - Cada PR describe qué incluye y cómo probarlo.
+
+## Si tu rama se queda atrás
+
+Cuando otra persona mergea su PR, `main` avanza y tu rama queda desactualizada. GitHub lo avisa en tu PR con "This branch is out-of-date".
+
+1. En tu PR, pulsa **Update branch**. GitHub trae los cambios de `main` a tu rama con un commit de unión; no reescribe tu trabajo.
+2. En tu ordenador, antes de seguir trabajando: `git checkout <tu-rama>` y `git pull`.
+   Si prefieres no usar el botón, desde la terminal: `git checkout <tu-rama>`, `git pull origin main` y `git push`.
+3. Si `git push` responde "rejected" o "non-fast-forward", haz `git pull` y vuelve a hacer `git push`. No uses `--force`.
+4. Si `git pull` muestra `CONFLICT`, no borres nada: avisa al equipo y se resuelve entre todos.
