@@ -8,7 +8,7 @@ Prototipo e-commerce en **HTML + Tailwind CSS únicamente** (sin JavaScript ni o
 |-------|---------|------|
 | Home | `index.html` | `feature/home` |
 | Catálogo | `catalogo.html` | `feature/catalogo` |
-| Producto | `producto.html` | `feature/producto` |
+| Producto | `producto/<nombre>.html` (una ficha por producto) | `feature/producto` |
 | Carrito | `carrito.html` | `feature/carrito` |
 | Checkout | `checkout.html` | `feature/checkout` |
 
@@ -19,8 +19,8 @@ El navbar ya enlaza a `catalogo.html`, `carrito.html` y el footer a `catalogo.ht
 1. `git checkout main && git pull origin main`
 2. `git checkout -b feature/<vista>`
 3. Copia `components/page-template.html` al archivo de tu vista.
-4. Pega `components/navbar.html` y `components/footer.html` donde indican los comentarios, **sin modificarlos**. Si hace falta un cambio, abre un PR contra `main` con la rama `feature/base-<cambio>`.
-5. Prueba en local: `pip3 install flask && python3 server.py`.
+4. Pega `components/navbar.html` y `components/footer.html` donde indican los comentarios, **sin modificarlos**. Si tu página está dentro de `producto/`, usa en su lugar `components/navbar-producto.html` y `components/footer-producto.html`: son idénticos, pero con los enlaces en `../` para que no den 404 desde la subcarpeta. Si hace falta un cambio, abre un PR contra `main` con la rama `feature/base-<cambio>` y regenera las variantes.
+5. Prueba en local: `python3 -m http.server 8000` y abre `http://localhost:8000/index.html`.
 
 ## Sistema de diseño
 
@@ -42,6 +42,7 @@ Breakpoints: móvil por defecto, `md:` tablet, `lg:` escritorio. Sin scroll hori
 - Un solo `<h1>` por página; jerarquía de `<h2>`/`<h3>` sin saltos.
 - Landmarks: `<header>`, `<nav>`, un `<main id="contenido">`, `<footer>`.
 - `<title>` y `meta description` únicos; `alt` descriptivo en imágenes; `width`/`height` en `<img>`; `loading="lazy"` salvo la imagen principal.
+- Tailwind: usa el `<script>` de `components/page-template.html` (versión fija con `integrity`); no lo cambies a `@4`.
 - Schema.org en JSON-LD donde aplique (`Product` en producto, `ItemList` en listados).
 
 ## Git
