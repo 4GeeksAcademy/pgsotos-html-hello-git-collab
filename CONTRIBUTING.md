@@ -8,7 +8,7 @@ Prototipo e-commerce en **HTML + Tailwind CSS únicamente** (sin JavaScript ni o
 |-------|---------|------|
 | Home | `index.html` | `feature/home` |
 | Catálogo | `catalogo.html` | `feature/catalogo` |
-| Producto | `producto.html` | `feature/producto` |
+| Producto | `producto/<nombre>.html` (una ficha por producto) | `feature/producto` |
 | Carrito | `carrito.html` | `feature/carrito` |
 | Checkout | `checkout.html` | `feature/checkout` |
 
