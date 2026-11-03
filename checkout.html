@@ -227,6 +227,77 @@
               </div>
             </fieldset>
           </section>
+
+          <!-- Paso 3: Pago con tarjeta -->
+          <section id="paso-3" class="mb-12 scroll-mt-20">
+            <h2 class="font-serif text-2xl font-semibold text-stone-900 mb-6">3. Pago con tarjeta</h2>
+            
+            <fieldset class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
+              <div>
+                <label for="cc-name" class="block text-sm font-medium text-stone-900 mb-2">Nombre en la tarjeta *</label>
+                <input
+                  id="cc-name"
+                  type="text"
+                  name="cc-name"
+                  required
+                  autocomplete="cc-name"
+                  placeholder="JUAN GARCÍA LOPEZ"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                />
+              </div>
+
+              <div>
+                <label for="cc-number" class="block text-sm font-medium text-stone-900 mb-2">Número de tarjeta *</label>
+                <input
+                  id="cc-number"
+                  type="text"
+                  name="cc-number"
+                  required
+                  autocomplete="cc-number"
+                  inputmode="numeric"
+                  placeholder="0000 0000 0000 0000"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="cc-exp" class="block text-sm font-medium text-stone-900 mb-2">Vencimiento (MM/AA) *</label>
+                  <input
+                    id="cc-exp"
+                    type="text"
+                    name="cc-exp"
+                    required
+                    autocomplete="cc-exp"
+                    inputmode="numeric"
+                    placeholder="MM/AA"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  />
+                </div>
+
+                <div>
+                  <label for="cc-csc" class="block text-sm font-medium text-stone-900 mb-2">CVV *</label>
+                  <input
+                    id="cc-csc"
+                    type="text"
+                    name="cc-csc"
+                    required
+                    autocomplete="cc-csc"
+                    inputmode="numeric"
+                    placeholder="000"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  />
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Botón Pagar -->
+            <div class="mt-8 flex gap-4">
+              <button type="submit" class="rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800">
+                Pagar
+              </button>
+            </div>
+          </section>
         </div>
 
         <!-- Columna derecha: Resumen del pedido (1/3 en desktop) -->
