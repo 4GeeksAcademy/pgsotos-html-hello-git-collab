@@ -42,6 +42,7 @@ Breakpoints: móvil por defecto, `md:` tablet, `lg:` escritorio. Sin scroll hori
 - Un solo `<h1>` por página; jerarquía de `<h2>`/`<h3>` sin saltos.
 - Landmarks: `<header>`, `<nav>`, un `<main id="contenido">`, `<footer>`.
 - `<title>` y `meta description` únicos; `alt` descriptivo en imágenes; `width`/`height` en `<img>`; `loading="lazy"` salvo la imagen principal.
+- Tailwind: usa el `<script>` de `components/page-template.html` (versión fija con `integrity`); no lo cambies a `@4`.
 - Schema.org en JSON-LD donde aplique (`Product` en producto, `ItemList` en listados).
 
 ## Git

@@ -6,7 +6,7 @@ Rules for AI agents working in this repository. `CONTRIBUTING.md` is the source 
 
 Prototype e-commerce site for a French clothing brand (Maison Vérane). Five views: Home (`index.html`), Catalog (`catalogo.html`), Product, Cart, Checkout.
 
-- **Stack:** plain HTML + Tailwind CSS v4 via the CDN script. No JavaScript, no frameworks, no bundlers, no extra dependencies.
+- **Stack:** plain HTML + Tailwind CSS v4 via the CDN script, pinned to an exact version with an SRI `integrity` hash (copy the `<script>` tag from `components/page-template.html`; never switch it back to `@4`). No JavaScript, no frameworks, no bundlers, no extra dependencies.
 - **Shared components:** `components/navbar.html` and `components/footer.html` are copied unchanged into every page; pages inside `producto/` use `components/navbar-producto.html` and `components/footer-producto.html` (same markup, `../` links). Change them only through a dedicated PR.
 - **Images:** local files in `assets/img/` (credits in `assets/img/CREDITS.md`). No hotlinked images.
 - **Language:** page copy is Spanish (`<html lang="es">`); code, identifiers and comments are English.
