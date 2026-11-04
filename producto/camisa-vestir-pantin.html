@@ -122,38 +122,38 @@
                     <legend class="sr-only">Talla</legend>
                     <ul class="flex flex-wrap gap-2" role="list">
                       <li>
-                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium">
-                          <input type="radio" name="talla" value="xs" class="appearance-none" />
+                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-orange-800">
+                          <input type="radio" form="agregar-carrito" name="talla" value="xs" class="appearance-none" />
                           XS
                         </label>
                       </li>
                       <li>
-                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium">
-                          <input type="radio" name="talla" value="s" class="appearance-none" checked />
+                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-orange-800">
+                          <input type="radio" form="agregar-carrito" name="talla" value="s" class="appearance-none" checked />
                           S
                         </label>
                       </li>
                       <li>
-                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium">
-                          <input type="radio" name="talla" value="m" class="appearance-none" />
+                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-orange-800">
+                          <input type="radio" form="agregar-carrito" name="talla" value="m" class="appearance-none" />
                           M
                         </label>
                       </li>
                       <li>
-                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium">
-                          <input type="radio" name="talla" value="l" class="appearance-none" />
+                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-orange-800">
+                          <input type="radio" form="agregar-carrito" name="talla" value="l" class="appearance-none" />
                           L
                         </label>
                       </li>
                       <li>
-                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium">
-                          <input type="radio" name="talla" value="xl" class="appearance-none" />
+                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-orange-800">
+                          <input type="radio" form="agregar-carrito" name="talla" value="xl" class="appearance-none" />
                           XL
                         </label>
                       </li>
                       <li>
-                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium">
-                          <input type="radio" name="talla" value="xxl" class="appearance-none" />
+                        <label class="flex cursor-pointer items-center gap-1.5 rounded-full border border-stone-300 px-4 py-1.5 text-sm has-[:checked]:border-orange-800 has-[:checked]:bg-orange-100 has-[:checked]:font-medium has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-orange-800">
+                          <input type="radio" form="agregar-carrito" name="talla" value="xxl" class="appearance-none" />
                           XXL
                         </label>
                       </li>
@@ -167,7 +167,7 @@
               95,00&nbsp;<span class="text-lg font-normal text-stone-500">€</span>
             </p>
 
-            <form action="#" method="post" class="mt-6">
+            <form id="agregar-carrito" action="#" method="post" class="mt-6">
               <div class="flex items-center gap-3">
                 <label for="cantidad" class="text-sm font-medium text-stone-700">Cantidad</label>
                 <div class="flex">

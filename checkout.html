@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
     <title>Finalizar compra | Maison Vérane</title>
     <meta name="description" content="Completa tu compra en Maison Vérane. Ingresa tus datos personales, dirección de entrega y pago." />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.4/dist/index.global.js" integrity="sha384-LhJn7QKq7hHz9EqN//RkaYS9p1ZU3MqAxjeV0JI95iQ5Gol1uz/cQQ+pesz0xum7" crossorigin="anonymous"></script>
@@ -82,6 +83,51 @@
 
       <!-- Formulario de checkout -->
       <form action="#" method="post" class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+        <!-- Columna derecha: Resumen del pedido (arriba en móvil, 1/3 a la derecha en desktop) -->
+        <aside class="lg:order-last lg:col-span-1">
+          <div class="sticky top-24 rounded-lg border border-stone-200 bg-white p-6">
+            <h2 class="font-serif text-lg font-semibold text-stone-900 mb-4">Resumen del pedido</h2>
+            
+            <ul class="space-y-3 border-b border-stone-200 pb-4 mb-4">
+              <li class="flex justify-between text-sm">
+                <span class="text-stone-900">Pantalón de lino Riviera</span>
+                <span class="font-medium">109,00 €</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span class="text-stone-900">Sandalias Bastille × 2</span>
+                <span class="font-medium">238,00 €</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span class="text-stone-900">Cartera negra Pigalle</span>
+                <span class="font-medium">49,00 €</span>
+              </li>
+            </ul>
+
+            <div class="space-y-2 mb-6">
+              <div class="flex justify-between text-sm text-stone-600">
+                <span>Subtotal</span>
+                <span>396,00 €</span>
+              </div>
+              <div class="flex justify-between text-sm text-stone-600">
+                <span>Envío</span>
+                <span>Gratis</span>
+              </div>
+              <div class="flex justify-between text-sm text-stone-600">
+                <span>IVA incluido (20%)</span>
+                <span>66,00 €</span>
+              </div>
+              <div class="flex justify-between font-semibold text-stone-900 pt-2 border-t border-stone-200">
+                <span>Total</span>
+                <span class="text-lg">396,00 €</span>
+              </div>
+            </div>
+
+            <a href="carrito.html" class="block text-center text-sm text-stone-700 hover:text-orange-800 font-medium">
+              ← Volver al carrito
+            </a>
+          </div>
+        </aside>
+
         <!-- Columna izquierda: Formulario (2/3 en desktop) -->
         <div class="lg:col-span-2">
           <!-- Paso 1: Datos personales -->
@@ -304,50 +350,6 @@
           </section>
         </div>
 
-        <!-- Columna derecha: Resumen del pedido (1/3 en desktop) -->
-        <aside class="order-first lg:order-none lg:col-span-1">
-          <div class="sticky top-24 rounded-lg border border-stone-200 bg-white p-6">
-            <h2 class="font-serif text-lg font-semibold text-stone-900 mb-4">Resumen del pedido</h2>
-            
-            <ul class="space-y-3 border-b border-stone-200 pb-4 mb-4">
-              <li class="flex justify-between text-sm">
-                <span class="text-stone-900">Pantalón de lino Riviera</span>
-                <span class="font-medium">109,00 €</span>
-              </li>
-              <li class="flex justify-between text-sm">
-                <span class="text-stone-900">Sandalias Bastille × 2</span>
-                <span class="font-medium">238,00 €</span>
-              </li>
-              <li class="flex justify-between text-sm">
-                <span class="text-stone-900">Cartera negra Pigalle</span>
-                <span class="font-medium">49,00 €</span>
-              </li>
-            </ul>
-
-            <div class="space-y-2 mb-6">
-              <div class="flex justify-between text-sm text-stone-600">
-                <span>Subtotal</span>
-                <span>396,00 €</span>
-              </div>
-              <div class="flex justify-between text-sm text-stone-600">
-                <span>Envío</span>
-                <span>Gratis</span>
-              </div>
-              <div class="flex justify-between text-sm text-stone-600">
-                <span>IVA incluido (20%)</span>
-                <span>66,00 €</span>
-              </div>
-              <div class="flex justify-between font-semibold text-stone-900 pt-2 border-t border-stone-200">
-                <span>Total</span>
-                <span class="text-lg">396,00 €</span>
-              </div>
-            </div>
-
-            <a href="carrito.html" class="block text-center text-sm text-stone-700 hover:text-orange-800 font-medium">
-              ← Volver al carrito
-            </a>
-          </div>
-        </aside>
       </form>
     </main>
 
