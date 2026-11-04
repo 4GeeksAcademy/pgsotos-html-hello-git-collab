@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finalizar compra | Maison Vérane</title>
+    <meta name="description" content="Completa tu compra en Maison Vérane. Ingresa tus datos personales, dirección de entrega y pago." />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.4/dist/index.global.js" integrity="sha384-LhJn7QKq7hHz9EqN//RkaYS9p1ZU3MqAxjeV0JI95iQ5Gol1uz/cQQ+pesz0xum7" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-stone-50 font-sans text-stone-900 antialiased">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2">
+      Saltar al contenido
+    </a>
+
+    <!-- Navbar canónico. Copiar tal cual dentro de <body>, antes de <main>. Cambios: PR a feature/base. -->
+    <header class="sticky top-0 z-50 border-b border-stone-200 bg-stone-50/95 backdrop-blur">
+      <nav aria-label="Principal" class="mx-auto flex max-w-7xl flex-wrap items-center gap-x-4 gap-y-3 px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html" class="font-serif text-xl font-semibold tracking-wide text-stone-900 sm:text-2xl">
+          Maison Vérane
+        </a>
+
+        <form role="search" action="catalogo.html" method="get" class="order-last flex w-full md:order-none md:mx-6 md:w-auto md:flex-1">
+          <label for="buscar" class="sr-only">Buscar productos</label>
+          <input
+            id="buscar"
+            name="q"
+            type="search"
+            placeholder="Buscar camisas, calzado…"
+            class="min-w-0 flex-1 rounded-l-full border border-stone-300 bg-white px-4 py-2 text-sm placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+          />
+          <button type="submit" class="rounded-r-full bg-stone-900 px-4 py-2 text-sm font-medium text-white hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800">
+            Buscar
+          </button>
+        </form>
+
+        <ul class="ml-auto flex items-center gap-3 sm:gap-5 md:ml-0">
+          <li class="hidden sm:block">
+            <a href="catalogo.html" class="text-sm font-medium text-stone-700 hover:text-orange-800">Catálogo</a>
+          </li>
+          <li class="relative">
+            <details class="group">
+              <summary class="flex cursor-pointer list-none items-center gap-1 text-sm font-medium text-stone-700 hover:text-orange-800 [&::-webkit-details-marker]:hidden">
+                <span aria-hidden="true">👤</span>
+                <span>Mi cuenta</span>
+              </summary>
+              <ul class="absolute right-0 mt-2 w-44 rounded-md border border-stone-200 bg-white py-1 text-sm shadow-lg">
+                <li><a href="#" class="block px-4 py-2 hover:bg-stone-100">Iniciar sesión</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-stone-100">Crear cuenta</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-stone-100">Mis pedidos</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <a href="carrito.html" class="flex items-center gap-1 text-sm font-medium text-stone-700 hover:text-orange-800">
+              <span aria-hidden="true">🛍️</span>
+              <span>Carrito</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido" class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <h1 class="font-serif text-3xl font-semibold sm:text-4xl">Finalizar compra</h1>
+
+      <!-- Indicador de progreso -->
+      <nav aria-label="Progreso del checkout" class="mt-8 mb-12">
+        <ol class="flex items-center justify-center gap-2 sm:gap-4">
+          <li>
+            <a href="#paso-1" aria-label="Paso 1: Datos personales" aria-current="step" class="flex h-10 w-10 items-center justify-center rounded-full bg-orange-800 text-white font-semibold text-sm">1</a>
+          </li>
+          <li aria-hidden="true" class="flex-1 h-1 bg-stone-300"></li>
+          <li>
+            <a href="#paso-2" aria-label="Paso 2: Dirección de entrega" class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-stone-300 text-stone-900 font-semibold text-sm hover:border-orange-800">2</a>
+          </li>
+          <li aria-hidden="true" class="flex-1 h-1 bg-stone-300"></li>
+          <li>
+            <a href="#paso-3" aria-label="Paso 3: Pago con tarjeta" class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-stone-300 text-stone-900 font-semibold text-sm hover:border-orange-800">3</a>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Formulario de checkout -->
+      <form action="#" method="post" class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+        <!-- Columna izquierda: Formulario (2/3 en desktop) -->
+        <div class="lg:col-span-2">
+          <!-- Paso 1: Datos personales -->
+          <section id="paso-1" class="mb-12 scroll-mt-20">
+            <h2 id="paso-1-titulo" class="font-serif text-2xl font-semibold text-stone-900 mb-6">1. Datos personales</h2>
+            
+            <fieldset aria-labelledby="paso-1-titulo" class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="nombre" class="block text-sm font-medium text-stone-900 mb-2">Nombre *</label>
+                  <input
+                    id="nombre"
+                    type="text"
+                    name="nombre"
+                    required
+                    autocomplete="given-name"
+                    placeholder="Camille"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  />
+                </div>
+
+                <div>
+                  <label for="apellido" class="block text-sm font-medium text-stone-900 mb-2">Apellido *</label>
+                  <input
+                    id="apellido"
+                    type="text"
+                    name="apellido"
+                    required
+                    autocomplete="family-name"
+                    placeholder="Dubois"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-stone-900 mb-2">Email *</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  placeholder="camille.dubois@example.com"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                />
+              </div>
+
+              <div>
+                <label for="telefono" class="block text-sm font-medium text-stone-900 mb-2">Teléfono *</label>
+                <input
+                  id="telefono"
+                  type="tel"
+                  name="telefono"
+                  required
+                  autocomplete="tel"
+                  placeholder="+33 6 12 34 56 78"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                />
+              </div>
+            </fieldset>
+          </section>
+
+          <!-- Paso 2: Dirección de entrega -->
+          <section id="paso-2" class="mb-12 scroll-mt-20">
+            <h2 id="paso-2-titulo" class="font-serif text-2xl font-semibold text-stone-900 mb-6">2. Dirección de entrega</h2>
+            
+            <fieldset aria-labelledby="paso-2-titulo" class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
+              <div>
+                <label for="calle" class="block text-sm font-medium text-stone-900 mb-2">Calle y número *</label>
+                <input
+                  id="calle"
+                  type="text"
+                  name="calle"
+                  required
+                  autocomplete="address-line1"
+                  placeholder="12 Rue de la Paix"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                />
+              </div>
+
+              <div>
+                <label for="complemento" class="block text-sm font-medium text-stone-900 mb-2">Complemento (apto., piso, etc.)</label>
+                <input
+                  id="complemento"
+                  type="text"
+                  name="complemento"
+                  autocomplete="address-line2"
+                  placeholder="Apto. 5B (opcional)"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="ciudad" class="block text-sm font-medium text-stone-900 mb-2">Ciudad *</label>
+                  <input
+                    id="ciudad"
+                    type="text"
+                    name="ciudad"
+                    required
+                    autocomplete="address-level2"
+                    placeholder="París"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  />
+                </div>
+
+                <div>
+                  <label for="codigo-postal" class="block text-sm font-medium text-stone-900 mb-2">Código postal *</label>
+                  <input
+                    id="codigo-postal"
+                    type="text"
+                    name="codigo-postal"
+                    required
+                    autocomplete="postal-code"
+                    placeholder="75002"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="pais" class="block text-sm font-medium text-stone-900 mb-2">País *</label>
+                <select
+                  id="pais"
+                  name="pais"
+                  required
+                  autocomplete="country"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                >
+                  <option value="">Selecciona un país</option>
+                  <option value="FR" selected>Francia</option>
+                  <option value="ES">España</option>
+                  <option value="IT">Italia</option>
+                  <option value="DE">Alemania</option>
+                  <option value="BE">Bélgica</option>
+                  <option value="NL">Países Bajos</option>
+                  <option value="AT">Austria</option>
+                  <option value="CH">Suiza</option>
+                  <option value="PT">Portugal</option>
+                  <option value="LU">Luxemburgo</option>
+                </select>
+              </div>
+            </fieldset>
+          </section>
+
+          <!-- Paso 3: Pago con tarjeta.
+               Prototipo: los datos de tarjeta no se procesan. Un pago real debe usar
+               campos alojados por la pasarela de pago, nunca un formulario propio. -->
+          <section id="paso-3" class="mb-12 scroll-mt-20">
+            <h2 id="paso-3-titulo" class="font-serif text-2xl font-semibold text-stone-900 mb-6">3. Pago con tarjeta</h2>
+            
+            <fieldset aria-labelledby="paso-3-titulo" class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
+              <div>
+                <label for="cc-name" class="block text-sm font-medium text-stone-900 mb-2">Nombre en la tarjeta *</label>
+                <input
+                  id="cc-name"
+                  type="text"
+                  required
+                  autocomplete="cc-name"
+                  placeholder="CAMILLE DUBOIS"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                />
+              </div>
+
+              <div>
+                <label for="cc-number" class="block text-sm font-medium text-stone-900 mb-2">Número de tarjeta *</label>
+                <input
+                  id="cc-number"
+                  type="text"
+                  required
+                  autocomplete="cc-number"
+                  inputmode="numeric"
+                  pattern="[0-9 ]{13,23}"
+                  maxlength="23"
+                  placeholder="0000 0000 0000 0000"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="cc-exp" class="block text-sm font-medium text-stone-900 mb-2">Vencimiento (MM/AA) *</label>
+                  <input
+                    id="cc-exp"
+                    type="text"
+                    required
+                    autocomplete="cc-exp"
+                    inputmode="numeric"
+                    pattern="\d{2}\s?/\s?\d{2}"
+                    maxlength="7"
+                    placeholder="MM/AA"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  />
+                </div>
+
+                <div>
+                  <label for="cc-csc" class="block text-sm font-medium text-stone-900 mb-2">CVV *</label>
+                  <input
+                    id="cc-csc"
+                    type="text"
+                    required
+                    autocomplete="cc-csc"
+                    inputmode="numeric"
+                    pattern="\d{3,4}"
+                    maxlength="4"
+                    placeholder="000"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  />
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Botón Pagar -->
+            <div class="mt-8 flex gap-4">
+              <button type="submit" class="rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800">
+                Pagar
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <!-- Columna derecha: Resumen del pedido (1/3 en desktop) -->
+        <aside class="order-first lg:order-none lg:col-span-1">
+          <div class="sticky top-24 rounded-lg border border-stone-200 bg-white p-6">
+            <h2 class="font-serif text-lg font-semibold text-stone-900 mb-4">Resumen del pedido</h2>
+            
+            <ul class="space-y-3 border-b border-stone-200 pb-4 mb-4">
+              <li class="flex justify-between text-sm">
+                <span class="text-stone-900">Pantalón de lino Riviera</span>
+                <span class="font-medium">109,00 €</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span class="text-stone-900">Sandalias Bastille × 2</span>
+                <span class="font-medium">238,00 €</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span class="text-stone-900">Cartera negra Pigalle</span>
+                <span class="font-medium">49,00 €</span>
+              </li>
+            </ul>
+
+            <div class="space-y-2 mb-6">
+              <div class="flex justify-between text-sm text-stone-600">
+                <span>Subtotal</span>
+                <span>396,00 €</span>
+              </div>
+              <div class="flex justify-between text-sm text-stone-600">
+                <span>Envío</span>
+                <span>Gratis</span>
+              </div>
+              <div class="flex justify-between text-sm text-stone-600">
+                <span>IVA incluido (20%)</span>
+                <span>66,00 €</span>
+              </div>
+              <div class="flex justify-between font-semibold text-stone-900 pt-2 border-t border-stone-200">
+                <span>Total</span>
+                <span class="text-lg">396,00 €</span>
+              </div>
+            </div>
+
+            <a href="carrito.html" class="block text-center text-sm text-stone-700 hover:text-orange-800 font-medium">
+              ← Volver al carrito
+            </a>
+          </div>
+        </aside>
+      </form>
+    </main>
+
+    <!-- Footer canónico. Copiar tal cual dentro de <body>, después de </main>. Cambios: PR a feature/base. -->
+    <footer class="mt-16 border-t border-stone-200 bg-stone-900 text-stone-300">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <section aria-labelledby="footer-marca" class="sm:col-span-2 lg:col-span-1">
+          <h2 id="footer-marca" class="font-serif text-xl font-semibold text-white">Maison Vérane</h2>
+          <p class="mt-3 text-sm leading-relaxed">Moda atemporal diseñada en París. Prendas esenciales, hechas para durar.</p>
+        </section>
+
+        <nav aria-labelledby="footer-categorias">
+          <h2 id="footer-categorias" class="text-sm font-semibold uppercase tracking-wider text-white">Categorías</h2>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="catalogo.html?categoria=calzado" class="hover:text-white">Calzado</a></li>
+            <li><a href="catalogo.html?categoria=camisas" class="hover:text-white">Camisas</a></li>
+            <li><a href="catalogo.html?categoria=pantalones" class="hover:text-white">Pantalones</a></li>
+            <li><a href="catalogo.html?categoria=accesorios" class="hover:text-white">Accesorios</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-legal">
+          <h2 id="footer-legal" class="text-sm font-semibold uppercase tracking-wider text-white">Legal</h2>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white">Términos y condiciones</a></li>
+            <li><a href="#" class="hover:text-white">Política de privacidad</a></li>
+            <li><a href="#" class="hover:text-white">Sobre la marca</a></li>
+          </ul>
+        </nav>
+
+        <section aria-labelledby="footer-contacto">
+          <h2 id="footer-contacto" class="text-sm font-semibold uppercase tracking-wider text-white">Contacto</h2>
+          <address class="mt-4 space-y-2 text-sm not-italic">
+            <p>12 Rue de la Paix<br />75002 París, Francia</p>
+            <p><a href="mailto:contacto@maisonverane.example" class="hover:text-white">contacto@maisonverane.example</a></p>
+            <p><a href="tel:+33142000000" class="hover:text-white">+33 1 42 00 00 00</a></p>
+          </address>
+        </section>
+      </div>
+      <p class="border-t border-stone-800 px-4 py-6 text-center text-xs text-stone-400">
+        © 2026 Maison Vérane. Prototipo con fines de demostración.
+      </p>
+    </footer>
+  </body>
+</html>
