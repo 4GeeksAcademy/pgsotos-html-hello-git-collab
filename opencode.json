@@ -8,8 +8,12 @@
       "gh pr close*": "deny",
       "git push*--force*": "deny",
       "git push* -f*": "deny",
+      "git push* +*": "deny",
+      "git push*--delete*": "deny",
+      "git push*--mirror*": "deny",
       "git push* main*": "deny",
       "git push*:main*": "deny",
+      "git push*refs/heads/main*": "deny",
       "gh api *": "ask"
     }
   }
