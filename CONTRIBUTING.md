@@ -43,6 +43,7 @@ Breakpoints: móvil por defecto, `md:` tablet, `lg:` escritorio. Sin scroll hori
 - Landmarks: `<header>`, `<nav>`, un `<main id="contenido">`, `<footer>`.
 - `<title>` y `meta description` únicos; `alt` descriptivo en imágenes; `width`/`height` en `<img>`; `loading="lazy"` salvo la imagen principal.
 - Tailwind: usa el `<script>` de `components/page-template.html` (versión fija con `integrity`); no lo cambies a `@4`.
+- Favicon: conserva el `<link rel="icon">` de `components/page-template.html`. Dentro de `producto/` la ruta es `../assets/favicon.svg`.
 - Schema.org en JSON-LD donde aplique (`Product` en producto, `ItemList` en listados).
 
 ## Git
