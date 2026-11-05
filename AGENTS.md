@@ -36,7 +36,7 @@ The two reviewers report findings; they never edit. Applying their feedback is `
 
 ## Rules
 
-The hard limits below (merging, approving, force-push, push to `main`) are also blocked in `opencode.json` under `permission`. The rest is guidance.
+The hard limits below (merging, approving, force-push, push to `main`) are also denied by command patterns in `opencode.json` under `permission`. Patterns catch the usual forms of each command, not every possible one; branch protection on GitHub is the real stop for `main`. The rest is guidance.
 
 - Never commit or push to `main`. Never force-push a shared branch.
 - Agents never approve, merge or close PRs, and never change branch protection. Those are human decisions.
