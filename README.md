@@ -1,41 +1,29 @@
-# HTML Hello
+# Maison Vérane
 
-The most basic boilerplate for any 4Geeks Academy student, start your very first website from scratch.
+Prototipo de tienda online de una marca de ropa francesa. Solo HTML y Tailwind CSS v4 (CDN), sin JavaScript.
 
-> There is a video tutorial on [how to use this template to create your very first website here](https://youtu.be/dfbDCMu_p-0).
+**Demo:** https://4geeksacademy.github.io/pgsotos-html-hello-git-collab/
 
-## What to do next?
+## Vistas
 
-Create an `index.html` file with the [basic HTML structure](http://4geeks.com/lesson/what-is-html-learn-html#page-structure) and see it live by running a web-server using the following command:
+| Vista | Archivo |
+|-------|---------|
+| Home | `index.html` |
+| Catálogo | `catalogo.html` |
+| Producto (20 fichas) | `producto/<nombre>.html` |
+| Carrito | `carrito.html` |
+| Checkout | `checkout.html` |
+
+## Ejecutar en local
 
 ```bash
-$ python3 -m http.server 8000
+python3 -m http.server 8000
 ```
 
-- You can create as many HTML files as you want.
-- You can also create CSS files and import them into your website using a `<link>` tag placed between the `<head></head>` tags, like this:
+Abre `http://localhost:8000/index.html`.
 
-```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
+## Documentación
 
-- If you want to use Tailwind CSS, add it optionally via the official Tailwind CSS v4 CDN inside the same `<head>`:
-
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
-
-### Contributors
-
-This template was built as part of the [Full Stack Developer course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) at [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and [many other contributors](https://github.com/4GeeksAcademy/html-hello/graphs/contributors).
-
-You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).
+- [`CONTRIBUTING.md`](CONTRIBUTING.md): tokens de diseño, reglas de HTML y SEO, flujo de Git.
+- [`AGENTS.md`](AGENTS.md): reglas para los agentes de IA del repositorio.
+- [`assets/img/CREDITS.md`](assets/img/CREDITS.md): créditos de las fotos (Unsplash).
