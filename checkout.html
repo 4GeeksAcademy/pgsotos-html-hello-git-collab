@@ -69,15 +69,15 @@
       <nav aria-label="Progreso del checkout" class="mt-8 mb-12">
         <ol class="flex items-center justify-center gap-2 sm:gap-4">
           <li>
-            <a href="#paso-1" aria-label="Paso 1: Datos personales" aria-current="step" class="flex h-10 w-10 items-center justify-center rounded-full bg-orange-800 text-white font-semibold text-sm">1</a>
+            <a href="#paso-1" aria-label="Paso 1: Datos personales" aria-current="step" class="flex h-11 w-11 items-center justify-center rounded-full bg-orange-800 text-white font-semibold text-sm">1</a>
           </li>
           <li aria-hidden="true" class="flex-1 h-1 bg-stone-300"></li>
           <li>
-            <a href="#paso-2" aria-label="Paso 2: Dirección de entrega" class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-stone-300 text-stone-900 font-semibold text-sm hover:border-orange-800">2</a>
+            <a href="#paso-2" aria-label="Paso 2: Dirección de entrega" class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-stone-300 text-stone-900 font-semibold text-sm hover:border-orange-800">2</a>
           </li>
           <li aria-hidden="true" class="flex-1 h-1 bg-stone-300"></li>
           <li>
-            <a href="#paso-3" aria-label="Paso 3: Pago con tarjeta" class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-stone-300 text-stone-900 font-semibold text-sm hover:border-orange-800">3</a>
+            <a href="#paso-3" aria-label="Paso 3: Pago con tarjeta" class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-stone-300 text-stone-900 font-semibold text-sm hover:border-orange-800">3</a>
           </li>
         </ol>
       </nav>
@@ -132,7 +132,7 @@
         <!-- Columna izquierda: Formulario (2/3 en desktop) -->
         <div class="lg:col-span-2">
           <!-- Paso 1: Datos personales -->
-          <section id="paso-1" class="mb-12 scroll-mt-20">
+          <section id="paso-1" class="mb-12 scroll-mt-32">
             <h2 id="paso-1-titulo" class="font-serif text-2xl font-semibold text-stone-900 mb-6">1. Datos personales</h2>
             
             <fieldset aria-labelledby="paso-1-titulo" class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
@@ -146,7 +146,7 @@
                     required
                     autocomplete="given-name"
                     placeholder="Camille"
-                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                   />
                 </div>
 
@@ -159,7 +159,7 @@
                     required
                     autocomplete="family-name"
                     placeholder="Dubois"
-                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                   />
                 </div>
               </div>
@@ -173,7 +173,7 @@
                   required
                   autocomplete="email"
                   placeholder="camille.dubois@example.com"
-                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                 />
               </div>
 
@@ -186,14 +186,14 @@
                   required
                   autocomplete="tel"
                   placeholder="+33 6 12 34 56 78"
-                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                 />
               </div>
             </fieldset>
           </section>
 
           <!-- Paso 2: Dirección de entrega -->
-          <section id="paso-2" class="mb-12 scroll-mt-20">
+          <section id="paso-2" class="mb-12 scroll-mt-32">
             <h2 id="paso-2-titulo" class="font-serif text-2xl font-semibold text-stone-900 mb-6">2. Dirección de entrega</h2>
             
             <fieldset aria-labelledby="paso-2-titulo" class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
@@ -206,7 +206,7 @@
                   required
                   autocomplete="address-line1"
                   placeholder="12 Rue de la Paix"
-                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                 />
               </div>
 
@@ -218,7 +218,7 @@
                   name="complemento"
                   autocomplete="address-line2"
                   placeholder="Apto. 5B (opcional)"
-                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                 />
               </div>
 
@@ -232,7 +232,7 @@
                     required
                     autocomplete="address-level2"
                     placeholder="París"
-                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                   />
                 </div>
 
@@ -245,7 +245,7 @@
                     required
                     autocomplete="postal-code"
                     placeholder="75002"
-                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                   />
                 </div>
               </div>
@@ -257,7 +257,7 @@
                   name="pais"
                   required
                   autocomplete="country"
-                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                 >
                   <option value="">Selecciona un país</option>
                   <option value="FR" selected>Francia</option>
@@ -278,10 +278,13 @@
           <!-- Paso 3: Pago con tarjeta.
                Prototipo: los datos de tarjeta no se procesan. Un pago real debe usar
                campos alojados por la pasarela de pago, nunca un formulario propio. -->
-          <section id="paso-3" class="mb-12 scroll-mt-20">
+          <section id="paso-3" class="mb-12 scroll-mt-32">
             <h2 id="paso-3-titulo" class="font-serif text-2xl font-semibold text-stone-900 mb-6">3. Pago con tarjeta</h2>
+            <p id="aviso-prototipo" class="mb-6 border-l-2 border-orange-800 bg-orange-50 py-2 pr-3 pl-3 text-sm leading-relaxed text-stone-700">
+              <strong>Prototipo de demostración:</strong> no introduzcas datos reales de tarjeta. No se procesa ningún pago.
+            </p>
             
-            <fieldset aria-labelledby="paso-3-titulo" class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
+            <fieldset aria-labelledby="paso-3-titulo" aria-describedby="aviso-prototipo" class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
               <div>
                 <label for="cc-name" class="block text-sm font-medium text-stone-900 mb-2">Nombre en la tarjeta *</label>
                 <input
@@ -290,7 +293,7 @@
                   required
                   autocomplete="cc-name"
                   placeholder="CAMILLE DUBOIS"
-                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                 />
               </div>
 
@@ -305,7 +308,7 @@
                   pattern="[0-9 ]{13,23}"
                   maxlength="23"
                   placeholder="0000 0000 0000 0000"
-                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                  class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                 />
               </div>
 
@@ -321,7 +324,7 @@
                     pattern="\d{2}\s?/\s?\d{2}"
                     maxlength="7"
                     placeholder="MM/AA"
-                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                   />
                 </div>
 
@@ -336,7 +339,7 @@
                     pattern="\d{3,4}"
                     maxlength="4"
                     placeholder="000"
-                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
+                    class="w-full rounded-lg border border-stone-300 bg-white px-4 py-2 text-base sm:text-sm text-stone-900 placeholder:text-stone-500 focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800"
                   />
                 </div>
               </div>
@@ -344,7 +347,7 @@
 
             <!-- Botón Pagar -->
             <div class="mt-8 flex gap-4">
-              <button type="submit" class="rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800">
+              <button type="submit" class="min-h-12 w-full rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white sm:w-auto hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800">
                 Pagar
               </button>
             </div>
