@@ -132,7 +132,7 @@
         <!-- Columna izquierda: Formulario (2/3 en desktop) -->
         <div class="lg:col-span-2">
           <!-- Paso 1: Datos personales -->
-          <section id="paso-1" class="mb-12 scroll-mt-20">
+          <section id="paso-1" class="mb-12 scroll-mt-28">
             <h2 id="paso-1-titulo" class="font-serif text-2xl font-semibold text-stone-900 mb-6">1. Datos personales</h2>
             
             <fieldset aria-labelledby="paso-1-titulo" class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
@@ -193,7 +193,7 @@
           </section>
 
           <!-- Paso 2: Dirección de entrega -->
-          <section id="paso-2" class="mb-12 scroll-mt-20">
+          <section id="paso-2" class="mb-12 scroll-mt-28">
             <h2 id="paso-2-titulo" class="font-serif text-2xl font-semibold text-stone-900 mb-6">2. Dirección de entrega</h2>
             
             <fieldset aria-labelledby="paso-2-titulo" class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
@@ -278,8 +278,11 @@
           <!-- Paso 3: Pago con tarjeta.
                Prototipo: los datos de tarjeta no se procesan. Un pago real debe usar
                campos alojados por la pasarela de pago, nunca un formulario propio. -->
-          <section id="paso-3" class="mb-12 scroll-mt-20">
+          <section id="paso-3" class="mb-12 scroll-mt-28">
             <h2 id="paso-3-titulo" class="font-serif text-2xl font-semibold text-stone-900 mb-6">3. Pago con tarjeta</h2>
+            <p class="mb-6 border-l-2 border-orange-800 pl-3 text-sm leading-relaxed text-stone-700">
+              Prototipo de demostración: no introduzcas datos reales de tarjeta. No se procesa ningún pago.
+            </p>
             
             <fieldset aria-labelledby="paso-3-titulo" class="space-y-5 border border-stone-200 rounded-lg p-6 bg-white">
               <div>
@@ -344,7 +347,7 @@
 
             <!-- Botón Pagar -->
             <div class="mt-8 flex gap-4">
-              <button type="submit" class="rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800">
+              <button type="submit" class="min-h-12 w-full rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white sm:w-auto hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800">
                 Pagar
               </button>
             </div>
