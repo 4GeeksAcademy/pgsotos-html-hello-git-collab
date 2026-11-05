@@ -1,4 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#1c1917"/>
-  <text x="32" y="46" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700" fill="#fafaf9">V</text>
+  <style>
+    .bg { fill: #1c1917; }
+    .v { fill: #fafaf9; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #fafaf9; }
+      .v { fill: #1c1917; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="12"/>
+  <path class="v" d="M12 14h18v3l-4 1 6 22 6-22-4-1v-3h18v3l-4 1-12 32h-8L16 18l-4-1z"/>
 </svg>
